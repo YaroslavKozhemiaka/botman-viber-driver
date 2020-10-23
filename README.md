@@ -86,7 +86,7 @@ $botman->fallback(static function (BotMan $bot) {
 
 $botman->listen();
 ```
-###Send Rich Media message / Carousel content message
+### Send Rich Media message / Carousel content message
 ```php
 $carousel = Carousel::create(6,3)->addElement(
             CarouselElement::create('<font color="#FFFFFF">Text1</font>',6,1),
