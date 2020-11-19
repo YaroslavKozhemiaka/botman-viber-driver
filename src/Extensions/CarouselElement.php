@@ -50,21 +50,29 @@ class CarouselElement implements Arrayable
     public function type(string $type)
     {
         $this->type = $type;
+
+        return $this;
     }
 
     public function bgColor(string $bgColor)
     {
         $this->bgColor = $bgColor;
+
+        return $this;
     }
 
     public function textOptions(array $textOptions)
     {
         $this->textOptions = $textOptions;
+
+        return $this;
     }
 
     public function image(string $url)
     {
         $this->imageUrl = $url;
+
+        return $this;
     }
 
     public function toArray()
