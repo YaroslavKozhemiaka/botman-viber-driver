@@ -8,7 +8,7 @@ Connect Viber with [BotMan](http://botman.io/)
 First you need to pull in the Viber Driver.
 
 ```console
-composer require polyskalov/botman-viber-driver
+composer require yaroslav-kozhemiaka/botman-viber-driver
 ```
 Then load the driver before creating the BotMan instance (only when you don't use BotMan Studio):
 
