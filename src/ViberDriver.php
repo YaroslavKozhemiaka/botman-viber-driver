@@ -58,7 +58,10 @@ class ViberDriver extends HttpDriver
      */
     public function buildPayload(Request $request): void
     {
-        $this->payload = new ParameterBag((array) json_decode($request->getContent(), true));
+        $payload = (array) json_decode($request->getContent(), true);
+        $payload['sig'] = $request->query->get('sig');
+
+        $this->payload = new ParameterBag($payload);
         $this->content = $request->getContent();
         $this->event = Collection::make($this->payload->get('event'));
         $this->signature = $request->headers->get('X-Viber-Content-Signature', '');

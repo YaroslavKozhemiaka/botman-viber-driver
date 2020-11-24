@@ -96,3 +96,12 @@ $carousel = Carousel::create(6,3)->addElement(
 
 $this->say("Default text",$carousel->toArray());
 ```
+### CapturedMiddleware
+CapturedMiddleware is a middleware which resolve issue with repeating message from VIBER api.
+This middleware filter messages and return abort response if message already sended to the bot.
+CapturedMiddleware require Redis, because use this as a cache and work only in conversations. 
+```php
+use App\Http\Middleware\CapturedMiddleware;
+
+$botman->middleware->captured(new CapturedMiddleware());
+``` 
